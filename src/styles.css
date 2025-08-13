@@ -1,0 +1,14 @@
+:root { --bg: #0f172a; --card:#fff; --accent:#06b6d4; }
+body { font-family: Inter, system-ui, Arial; background: linear-gradient(180deg,#eef2ff,#fff); margin:0; padding:20px; color:#0f172a; }
+.container{ max-width:800px; margin:20px auto; background:var(--card); padding:20px; border-radius:12px; box-shadow:0 6px 24px rgba(15,23,42,0.08); }
+.header{ display:flex; align-items:center; gap:12px;}
+.controls{ margin-top:12px;}
+.mic-btn{ width:84px; height:84px; border-radius:999px; background:linear-gradient(180deg,var(--accent),#0ea5a3); border:none; color:white; font-size:18px; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 18px rgba(6,182,212,0.3); cursor:pointer; }
+.mic-btn.listening{ animation: pulse 1.2s infinite; }
+@keyframes pulse { 0%{ transform: scale(1); box-shadow:0 6px 18px rgba(6,182,212,0.12);} 50%{ transform: scale(1.06); box-shadow:0 10px 30px rgba(6,182,212,0.22);} 100%{ transform: scale(1); box-shadow:0 6px 18px rgba(6,182,212,0.12);} }
+.status-row{ display:flex; gap:12px; align-items:center; margin-top:12px;}
+.transcript{ margin-top:14px; background:#f8fafc; padding:12px; border-radius:8px; min-height:72px; }
+.chat{ margin-top:12px; display:flex; flex-direction:column; gap:8px; }
+.bubble.ai{ align-self:flex-start; background:#eef2ff; padding:10px 12px; border-radius:12px; max-width:80%; }
+.bubble.user{ align-self:flex-end; background:#dcfce7; padding:10px 12px; border-radius:12px; max-width:80%; }
+.small{ font-size:12px; color:#64748b;}
